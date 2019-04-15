@@ -1,4 +1,5 @@
 //=============================================================================
+// Copyright 2006-2013 Daniel W. Dyer
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,34 +13,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //=============================================================================
-package cn.vincent.automation.testSample;
+package com.qa.testSample;
 
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * A configuration failure for testing that the report correctly reports
- * configuration failures.
+ * These tests are skipped because they depend on failed tests in
+ * another class.
  * @author Daniel Dyer
  */
-public class FailedConfiguration
+@Test(groups = "should-skip")
+public class SkippedTests
 {
-    /**
-     * A configuration method that will fail causing any test cases
-     * in this class to be skipped.
-     */
-    @BeforeClass
-    public void configure()
+    @Test(dependsOnGroups = "should-fail")
+    public void skippedDueToDependentGroup()
     {
-        throw new RuntimeException("Configuration failed.");
+        assert false : "This method is supposed to be skipped.";
     }
 
-    /**
-     * This test ought to be skipped since the configuration for this
-     * class will fail.
-     */
-    @Test
-    public void thisShouldBeSkipped()
+
+    @Test(dependsOnMethods = "skippedDueToDependentGroup")
+    public void skippedDueToDependentMethod()
     {
         assert false : "This method is supposed to be skipped.";
     }

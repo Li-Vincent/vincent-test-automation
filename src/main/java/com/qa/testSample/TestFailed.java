@@ -1,4 +1,4 @@
-package cn.vincent.automation.testSample;
+package com.qa.testSample;
 
 import org.testng.annotations.Test;
 

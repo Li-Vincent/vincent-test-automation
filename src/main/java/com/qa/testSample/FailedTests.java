@@ -13,11 +13,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 // =============================================================================
-package cn.vincent.automation.testSample;
+package com.qa.testSample;
 
 import org.testng.annotations.Test;
 
-import cn.vincent.automation.lib.ReporterLogger;
+import com.qa.lib.ReporterLogger;
 
 /**
  * Some test failures to be included in the sample output.

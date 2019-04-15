@@ -9,7 +9,7 @@
 	</listeners>
 	<test name="Test" preserve-order="true">
 		<packages>
-			<package name="cn.vincent.automation.testSample" />
+			<package name="com.qa.testSample" />
 		</packages>
 	</test>
 </suite>

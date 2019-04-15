@@ -1,4 +1,4 @@
-package cn.vincent.automation.lib;
+package com.qa.lib;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
